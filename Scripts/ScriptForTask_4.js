@@ -2,27 +2,15 @@
 
 const a = +prompt('Введите число a:');
 const b = +prompt('Введите число b:');
-const operator = prompt('Введите одно из действий (+, -, /, *)');
 
-(!isNaN(a) && !isNaN(b)) 
-    ? selectActions(a, b, operator)
-    : console.log('Было введено не число. Попробуйте снова.');
-
-function selectActions(a, b, operator) {
-    switch (operator) {
-        case '+':
-            console.log(`Сумма ${a} и ${b} составит: ${getSum(a, b)}`)
-            break;
-        case '-':
-            console.log(`Разность ${a} и ${b} составит: ${getSub(a, b)}`)
-            break;
-        case '/':
-            console.log(`Деление ${a} и ${b} составит: ${getDiv(a, b)}`)
-            break;
-        case '*':
-            console.log(`Произведение ${a} и ${b} составит: ${getInc(a, b)}`)
-            break;
-    }
+if(isNaN(a) || isNaN(b)) {
+    console.log('Было введено не число. Попробуйте снова.');
+}
+else{
+    console.log(`Сумма ${a} и ${b} составит: ${getSum(a, b)}`)
+    console.log(`Разность ${a} и ${b} составит: ${getSub(a, b)}`)
+    console.log(`Деление ${a} и ${b} составит: ${getDiv(a, b)}`)
+    console.log(`Произведение ${a} и ${b} составит: ${getInc(a, b)}`)
 }
 
 function getSum(a, b) {
