@@ -1,7 +1,7 @@
 'use strict'
 
-const a = +prompt('Введите значение переменной a:');
-const b = +prompt('Введите значение переменной b:');
+const a = +prompt('Введите число a:');
+const b = +prompt('Введите число b:');
 
 if (a >= 0 && b >= 0)
     console.log(`разность ${a} и ${b} составит ${a - b}`)
