@@ -31,20 +31,16 @@ function getResult(number){
 function compare(entry){
     const word = "руб";
 
-    if(entry.endsWith("1") && !entry.endsWith("11"))
-    {
+    if(entry.endsWith("1") && !entry.endsWith("11")) {
         return word + "ль";
     }
-    else if(entry.endsWith("12") || entry.endsWith("13") || entry.endsWith("14"))
-    {
+    else if(entry.endsWith("12") || entry.endsWith("13") || entry.endsWith("14")) {
         return word + "лей"
     } 
-    else if(entry.endsWith("2") || entry.endsWith("3") || entry.endsWith("4"))
-    {
+    else if(entry.endsWith("2") || entry.endsWith("3") || entry.endsWith("4")) {
         return word + "ля"
     } 
-    else
-    {
+    else {
         return word + "лей"
     } 
 }
