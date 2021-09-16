@@ -19,8 +19,8 @@ const products = [
 
 /**
  * Рассчитывает цену с условием скидки
- * @param {*} price - цена без скидки
- * @returns - цена со скидкой
+ * @param {number} price - цена без скидки
+ * @returns {number} - цена со скидкой
  */
 let discountedPrice = (price) => price - (price * discount / 100);
 
