@@ -1,6 +1,11 @@
 'use strict'
 
 //es5
+/**
+ * функция - конструктор
+ * @param {string} name - название продукта
+ * @param {number} price - цена продукта без учета скидки
+ */
 function Product(name, price) {
     this.name = name;
     this.price = price;
@@ -8,7 +13,7 @@ function Product(name, price) {
 
 Product.prototype.make25PercentDiscount = function() {
     console.log(`Цена на ${this.name} с учетом скидки - ${this.price - (this.price * .25)} д.е.`);
-}
+};
 
 let product = new Product('хлеб', 38);
 product.make25PercentDiscount();
