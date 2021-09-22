@@ -16,10 +16,10 @@
     и выведите их в консоль. -->
 
     <script>
-        const elementList = document.querySelectorAll('.one');
-        elementList.forEach(element => {
+        const elementList = document.getElementsByClassName('one');
+        for (const element of elementList) {
             console.log(element);
-        });
+        }
     </script>
 </body>
 </html>
