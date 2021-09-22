@@ -16,7 +16,14 @@
     2. Проверьте, есть ли в ссылке текст "ссылка", и если нет, то добавьте. -->
 
     <script>
-        
+        'use strict'
+
+        const elements = document.querySelectorAll('a');
+        elements.forEach(a => {
+            if(a.textContent === "") {
+                a.textContent = "ссылка";
+            }
+        });
     </script>
 </body>
 </html>

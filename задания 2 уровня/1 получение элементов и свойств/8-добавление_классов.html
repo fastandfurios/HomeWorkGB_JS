@@ -19,7 +19,14 @@
     -->
 
     <script>
-        
+        'use strict'
+
+        const elements = document.querySelectorAll('b');
+        for (const element of elements) {
+            if(!element.classList.contains('sign')) {
+                element.classList.add('sign');
+            }
+        }
     </script>
 </body>
 </html>
