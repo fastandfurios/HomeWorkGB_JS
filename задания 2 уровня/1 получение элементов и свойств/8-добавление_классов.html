@@ -23,7 +23,7 @@
 
         const elements = document.querySelectorAll('b');
         for (const element of elements) {
-            if(!element.classList.contains('sign')) {
+            if(!element?.classList.contains('sign')) {
                 element.classList.add('sign');
             }
         }

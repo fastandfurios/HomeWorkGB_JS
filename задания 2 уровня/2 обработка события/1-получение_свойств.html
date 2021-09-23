@@ -20,7 +20,7 @@
         'use strict'
 
         const button = document.querySelector('button');
-        button.addEventListener('click', event => {
+        button?.addEventListener('click', event => {
             console.log(`id: ${event.target.id}, имя класса: ${event.target.className}, текст на кнопке: ${event.target.textContent}`);
         });
     </script>

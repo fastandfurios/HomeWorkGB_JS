@@ -25,7 +25,7 @@
         'use strict'
 
         const div = document.querySelector('div');
-        div.addEventListener('click', event => {
+        div?.addEventListener('click', event => {
             console.log(event.target.getAttribute('class'));
             console.log(event.target.getAttribute('id'));
             console.log(event.target.getAttribute('tabindex'));

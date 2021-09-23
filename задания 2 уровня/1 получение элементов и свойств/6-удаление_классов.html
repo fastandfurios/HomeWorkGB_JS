@@ -28,7 +28,7 @@
 
         const elements = document.querySelectorAll('.card');
         elements.forEach(div => {
-            if(div.classList.contains('hidden')) {
+            if(div?.classList.contains('hidden')) {
                 div.remove();
             }
         });

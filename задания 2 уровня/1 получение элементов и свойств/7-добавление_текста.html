@@ -20,7 +20,7 @@
 
         const elements = document.querySelectorAll('a');
         elements.forEach(a => {
-            if(a.textContent === "") {
+            if(a?.textContent === "") {
                 a.textContent = "ссылка";
             }
         });

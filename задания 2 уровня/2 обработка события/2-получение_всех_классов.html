@@ -22,7 +22,7 @@
         'use strict'
 
         const element = document.querySelector('p');
-        element.addEventListener('click', event => {
+        element?.addEventListener('click', event => {
             console.log(event.target.classList);
 
             event.target.classList.forEach(e => {
