@@ -31,6 +31,8 @@
     -->
 
     <script>
+        'use strict';
+
         let firstStar = document.getElementById('first');
         let secondStar = document.getElementById('second');
         let thirdStar = document.getElementById('third');
@@ -39,15 +41,65 @@
 
         let goldenClass = 'golden';
 
+        function addGoldenClass(element) {
+            element.classList.add(goldenClass);
+
+            while(element.previousElementSibling != null) {
+                element.previousElementSibling.classList.add(goldenClass);
+                element = element.previousElementSibling;
+            }
+        }
+
+        function removeGoldenClass(element) {
+            element.classList.remove(goldenClass);
+
+            while(element.previousElementSibling != null) {
+                element.previousElementSibling.classList.remove(goldenClass);
+                element = element.previousElementSibling;
+            }
+        }
+
         firstStar.addEventListener('mouseover', function() {
             if (!firstStar.classList.contains('goldenClass')) {
-                firstStar.classList.add(goldenClass);
+                addGoldenClass(firstStar);
             }
         });
 
         firstStar.addEventListener('mouseout', function() {
-            firstStar.classList.remove(goldenClass);
+            removeGoldenClass(firstStar);
         });
+
+        secondStar.addEventListener('mouseover', () => {
+            if (!secondStar.classList.contains('goldenClass')) {
+                addGoldenClass(secondStar);
+            }
+        });
+
+        secondStar.addEventListener('mouseout', () => removeGoldenClass(secondStar));
+
+        thirdStar.addEventListener('mouseover', () => {
+            if (!thirdStar.classList.contains('goldenClass')) {
+                addGoldenClass(thirdStar);
+            }
+        });
+
+        thirdStar.addEventListener('mouseout', () => removeGoldenClass(thirdStar));
+
+        fourthStar.addEventListener('mouseover', () => {
+            if (!fourthStar.classList.contains('goldenClass')) {
+                addGoldenClass(fourthStar);
+            }
+        });
+
+        fourthStar.addEventListener('mouseout', () => removeGoldenClass(fourthStar));
+
+        fifthStar.addEventListener('mouseover', () => {
+            if(!fifthStar.classList.contains('goldenClass')) {
+                addGoldenClass(fifthStar);
+            }
+        });
+
+        fifthStar.addEventListener('mouseout', () => removeGoldenClass(fifthStar));
     </script>
 </body>
 </html>
