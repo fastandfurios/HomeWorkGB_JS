@@ -27,7 +27,14 @@
     -->
 
     <script>
-        
+        'use strict';
+
+        const goToTopEL = document.getElementById('goToTop');
+        window.addEventListener('scroll', () => {
+            window.pageYOffset >= 500
+                ? goToTopEL.style.display = "block"
+                : goToTopEL.style.display = "none";
+        });
     </script>
 </body>
 </html>

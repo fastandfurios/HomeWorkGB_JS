@@ -41,7 +41,15 @@
     -->
 
     <script>
+        'use strict';
+
+        const imgEl = document.querySelectorAll('img');
         
+        setTimeout(() => {
+            for (let index = 0; index < imgEl.length; index++) {
+                imgEl[index].setAttribute('src', `images/${index + 1}.jpg`);
+            }
+        }, 3000);
     </script>
 </body>
 </html>

@@ -36,7 +36,27 @@
      -->
 
     <script>
-        
+        'use strict';
+
+        const formEl = document.querySelector('form');
+        const inputFirstEl = document.getElementById('first');
+        const inputSecondEl = document.getElementById('second');
+
+        formEl?.addEventListener('submit', event => {
+            if(inputFirstEl?.value === "" && inputSecondEl?.value === "") {
+                    inputFirstEl.style.borderColor = "red";
+                    inputSecondEl.style.borderColor = "red";
+                    event.preventDefault();
+                }
+
+            if(inputFirstEl?.value === "" || inputSecondEl?.value === "") {
+                inputFirstEl.value === "" 
+                    ? inputFirstEl.style.borderColor = "red" 
+                    : inputSecondEl.style.borderColor = "red";
+
+                event.preventDefault();
+            }
+        });
     </script>
 </body>
 </html>
