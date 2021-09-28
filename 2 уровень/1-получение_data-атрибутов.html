@@ -20,7 +20,15 @@
     -->
 
     <script>
-        
+        'use strict';
+
+        const buttons = document.querySelectorAll('button');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                console.log(button.dataset);
+            });
+        });
     </script>
 </body>
 </html>
