@@ -7,6 +7,8 @@
 </head>
 <body>
     <script>
+        'use strict';
+
         const products = {
             one: "один",
             two: "два",
@@ -18,7 +20,9 @@
         Используя цикл for in переберите объект products, ведите в консоль
         имя свойства, значение свойства.
         */
-
+        for (const prop in products) {
+            console.log(`products.${prop} = ${products[prop]}`);
+        }
     </script>
 </body>
 </html>

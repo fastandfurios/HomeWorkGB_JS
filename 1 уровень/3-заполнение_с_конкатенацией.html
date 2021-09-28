@@ -8,7 +8,14 @@
 <body>
     
     <script>
+        'use strict';
+
         let totalString = "";
+        const length = 3;
+
+        for (let index = 1; index <= 3; index++) {
+            totalString += `слово${index}`;   
+        }
 
         /* Задание.
         Дописывайте в строку totalString с помощью цикла и конкатенации строки,
