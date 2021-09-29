@@ -9,7 +9,9 @@
 </head>
 
 <body>
-    <div></div>
+    <div>
+        <p class="percent">0</div>
+    </div>
 
     <!-- 
     Задание.
@@ -24,6 +26,7 @@
          */
         function changeProgress(percent) {
             div.style.background = `linear-gradient(90deg, rgba(38,255,162,1) ${percent}%, rgba(255,255,255,1) ${percent}%)`;
+            percentEl.textContent = `${percent} %`;
         }
 
         /* 
@@ -35,8 +38,12 @@
         можете также добавить какой-нибудь коэффициент, чтобы подобрать желаемую скорость
         заполнения прогресс-бара.
         */
-        
+        const length = 100;
+        const percentEl = document.querySelector('.percent');
 
+        for (let index = 1; index <= length; index++) {
+            setTimeout(() => changeProgress(index), 1000*index);
+        }
     </script>
 </body>
 
