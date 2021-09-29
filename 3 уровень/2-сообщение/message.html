@@ -26,7 +26,20 @@
     -->
 
     <script>
-        
+        'use strict';
+
+        const messageEl = document.querySelector('.message');
+        const btnEl = document.querySelector('button');
+
+        btnEl?.addEventListener('click', () => {
+            play();
+            messageEl.style.transform = `translateY(${- messageEl?.clientHeight - 50}px)`; //не полностью сообщение выезжает, пришлось добавить 50
+        });
+
+        function play() {
+            const notification = new Audio('notification.mp3');
+            notification.play();
+        }
     </script>
 </body>
 
