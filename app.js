@@ -31,9 +31,15 @@ filterSizeWrap.addEventListener('click', function() {
 
 const btns = document.querySelectorAll('.featuredItems button');
 const counterEl = document.querySelector('.cartIconWrap span');
+const cartIconWrapEl = document.querySelector('.cartIconWrap');
+const recyclebin = document.querySelector('.recyclebin');
 
 btns.forEach(btn => {
     btn.addEventListener('click', () => {
         counterEl.textContent = Number(counterEl.textContent) + 1;
     });
+});
+
+cartIconWrapEl?.addEventListener('click', () => {
+    recyclebin?.classList.toggle('hidden');
 });

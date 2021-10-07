@@ -709,3 +709,17 @@ body {
         margin-top: 40px;
     }
 }
+
+.recyclebin {
+    position: absolute;
+    right: 75px;
+    top: 25px;
+    width: 400px;
+    height: 103px;
+    background: #ffffff;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    padding: 7px 9px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #6f6e6e;
+}
