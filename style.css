@@ -714,12 +714,23 @@ body {
     position: absolute;
     right: 75px;
     top: 25px;
-    width: 400px;
-    height: 103px;
+    width: 600px;
+    height: 200px;
     background: #ffffff;
     box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
     padding: 7px 9px;
     box-sizing: border-box;
     font-size: 14px;
     color: #6f6e6e;
+}
+
+.headers, .product {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sum {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
 }
