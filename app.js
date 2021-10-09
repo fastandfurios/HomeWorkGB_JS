@@ -72,6 +72,7 @@ btns.forEach(btn => {
     });
 });
 
+//событие не срабатывает, пока в корзине нет товаров
 cartIconWrapEl?.addEventListener('click', () => {
     if(Number(counterEl.textContent) != 0) {
         document.querySelector('.recyclebin')?.classList.toggle('hidden');
@@ -79,7 +80,7 @@ cartIconWrapEl?.addEventListener('click', () => {
 });
 
 function changeHTML(productEl) {
-    return `<div class=product><div class=productName.block>${productEl.querySelector('.featuredName').textContent}</div><div class=volume block>${1}</div><div class=pricePerPiece block>${productEl.querySelector('.featuredPrice').textContent}</div><div class=totalPrice block>${productEl.querySelector('.featuredPrice').textContent}</div></div>`;
+    return `<div class=product><div class=productName>${productEl.querySelector('.featuredName').textContent}</div><div class=volume>${1}</div><div class=pricePerPiece>${productEl.querySelector('.featuredPrice').textContent}</div><div class=totalPrice>${productEl.querySelector('.featuredPrice').textContent}</div></div>`;
 }
 
 function getSum(array) {
